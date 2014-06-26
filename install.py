@@ -45,7 +45,7 @@ def patch_cygwin_portable(path):
     f.write('FOR /F "tokens=* USEBACKQ" %%F IN (`echo %cd%`) DO (\n')
     f.write('	SET dir=%%F\n')
     f.write(')\n')
-    f.write('chdir %dir%/bin\n')
+    f.write('chdir "%CD%/bin"\n')
     f.write('start "" "mintty.exe" -\n')
     f.close()
 
