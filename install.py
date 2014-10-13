@@ -36,7 +36,7 @@ def download_file(url):
     f.close()
     return file_name
 def install_cygwin(file_path, file_name):
-    command = file_name + " -B -R \"" + file_path + "\\cygwin\" -q -n -s http://cygwin.mirrorcatalogs.com -P wget,tar,vim,weechat,weechat-python,openssl,openssh,mintty,dos2unix,unzip,git,zip"
+    command = file_name + " -B -R \"" + file_path + "\\cygwin\" -q -n -s http://cygwin.mirrorcatalogs.com -P wget,tar,vim,weechat,weechat-python,openssl,openssh,mintty,dos2unix,unzip,git,zip,expect"
     subprocess.call(command, shell=True)
 
 def patch_cygwin_portable(path):
